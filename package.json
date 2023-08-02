@@ -1,0 +1,26 @@
+{
+  "name": "@ds.e/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"build": "yarn lerna run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": "true",
+  "devDependencies": {
+    "lerna": "^7.1.4"
+  },
+	"workspaces": {
+		"packages": [
+			"packages/*",
+			"playgrounds/*"
+		],
+		"nohoist": [
+      "**/normalize-scss"
+    ]
+	}
+}
