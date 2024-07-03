@@ -4,6 +4,6 @@
   "packages": [
     "packages/*"
   ],
-	"npmClient": "yarn",
-	"stream": true
+  "npmClient": "yarn",
+  "stream": true
 }

@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-		"build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev",
+    "test": "yarn lerna run test",
+    "publish": "yarn test && yarn build && yarn lerna publish",
+    "commit": "yarn git-cz",
+    "test:chromatic": "yarn lerna run test:chromatic",
+    "build:storybook": "yarn build && yarn lerna run build-storybook"
   },
   "keywords": [],
   "author": "",
@@ -14,13 +19,13 @@
   "devDependencies": {
     "lerna": "^7.1.4"
   },
-	"workspaces": {
-		"packages": [
-			"packages/*",
-			"playgrounds/*"
-		],
-		"nohoist": [
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "playgrounds/*"
+    ],
+    "nohoist": [
       "**/normalize-scss"
     ]
-	}
+  }
 }

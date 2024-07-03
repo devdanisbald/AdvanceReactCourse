@@ -1,5 +1,2 @@
-import Button from "./atoms/Button";
-
-export {
-	Button
-}
+export * from "./atoms";
+export * from "./molecules";
